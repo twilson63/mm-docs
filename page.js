@@ -7,6 +7,7 @@ import AppBar from './components/app-bar'
 import { Typography, Paper } from 'material-ui'
 import { withStyles } from 'material-ui/styles'
 import { grey } from 'material-ui/colors'
+import pkg from './package.json'
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -22,7 +23,7 @@ const styles = theme => ({
 
 const Page = ({ page, data, classes }) => (
   <div>
-    <AppBar title={`My Medwise Advisor Docs - ${page}`} />
+    <AppBar title={`${pkg.description} Docs - ${page}`} />
     <div style={{ marginTop: '70px' }}>
       <Paper className={classes.root}>
         <Typography type="display4">{page}</Typography>
